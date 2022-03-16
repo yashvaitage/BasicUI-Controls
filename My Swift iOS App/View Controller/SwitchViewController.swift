@@ -19,8 +19,8 @@ class SwitchViewController: UIViewController {
     
     @IBAction func mySwitchAction(_ sender: UISwitch) {
         if mySwitch.isOn{
-            view.backgroundColor = .systemPink
-            resLabel.text = "The color is Pink"
+            view.backgroundColor = .systemOrange
+            resLabel.text = "The color is Orange"
         }else{
             view.backgroundColor = .systemYellow
             resLabel.text = "The color is Yellow"

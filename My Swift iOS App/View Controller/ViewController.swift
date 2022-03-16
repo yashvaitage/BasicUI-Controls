@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         myLabel.backgroundColor = UIColor.systemOrange
         myLabel.textAlignment = NSTextAlignment.center
         myLabel.font = UIFont.systemFont(ofSize: 26)
-        myLabel.text = "Hello iOS Team"
+        myLabel.text = "Good Morning iOS Team"
     }
     
     
