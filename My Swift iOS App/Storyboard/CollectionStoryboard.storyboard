@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vyv-Rz-mWE">
-                                <rect key="frame" x="5" y="88" width="404" height="725"/>
+                                <rect key="frame" x="5" y="93" width="404" height="720"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rTl-UR-HVC">
                                     <size key="itemSize" width="197" height="303"/>
@@ -95,8 +95,8 @@
                         <viewLayoutGuide key="safeArea" id="16h-am-yaT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vyv-Rz-mWE" firstAttribute="top" secondItem="16h-am-yaT" secondAttribute="top" constant="5" id="1VO-mn-dnd"/>
                             <constraint firstItem="16h-am-yaT" firstAttribute="bottom" secondItem="vyv-Rz-mWE" secondAttribute="bottom" id="BS7-Ur-hsh"/>
-                            <constraint firstItem="vyv-Rz-mWE" firstAttribute="top" secondItem="16h-am-yaT" secondAttribute="top" id="Pe9-nq-mcG"/>
                             <constraint firstItem="16h-am-yaT" firstAttribute="trailing" secondItem="vyv-Rz-mWE" secondAttribute="trailing" constant="5" id="kY1-Vm-YGP"/>
                             <constraint firstItem="vyv-Rz-mWE" firstAttribute="leading" secondItem="16h-am-yaT" secondAttribute="leading" constant="5" id="uqG-d4-6HK"/>
                         </constraints>

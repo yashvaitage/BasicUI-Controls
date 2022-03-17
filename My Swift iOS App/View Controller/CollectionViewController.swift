@@ -9,14 +9,21 @@ import UIKit
 
 class CollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var arrlbl = ["KTM", "Pulser", "Shine", "RolyalEnfield", "Boat", "Mountain", "Bus"]
-    var arrimg = ["KTM", "Pulser", "Shine", "RolyalEnfield", "img1", "img2", "img3"]
+    var arrlbl = ["KTM", "Pulser NS 200", "Pulser NS Combo", "Pulser NS Black", "Shine", "Rolyal Enfield", "Boat", "Mountain", "Bus"]
+    var arrimg = ["KTM", "Pulser", "Pulser3", "Pulser Black", "Shine", "RolyalEnfield", "img1", "img2", "img3"]
 
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let barAppearance = UINavigationBarAppearance()
+        barAppearance.backgroundColor = .systemOrange
+        barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+//        barAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.red]
+        navigationItem.title = "Wallpaper Gallary"
+        navigationItem.standardAppearance = barAppearance
+        navigationItem.scrollEdgeAppearance = barAppearance
 
-       
+        
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -36,6 +43,8 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         imageDetail.mainlbl = arrlbl[indexPath.row]
         imageDetail.mainimg = UIImage(named: arrimg[indexPath.row])
         self.navigationController?.pushViewController(imageDetail, animated: true)
+//        ImageViewController.hidesBottomBarWhenPushed = true
+//        ImageViewController.tabBarController?.hidesBottomBarWhenPushed = true
     }
 
 }

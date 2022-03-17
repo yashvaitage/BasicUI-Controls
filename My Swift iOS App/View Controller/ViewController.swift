@@ -28,6 +28,13 @@ class ViewController: UIViewController {
         myBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
         myBtn.setTitle("Hit Me!", for: UIControl.State.normal)
         
+        let barAppearance = UINavigationBarAppearance()
+        barAppearance.backgroundColor = .systemOrange
+        barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationItem.title = "Slider"
+        navigationItem.standardAppearance = barAppearance
+        navigationItem.scrollEdgeAppearance = barAppearance
+
     }
 
     @IBAction func sliderUpdate(_ sender: UISlider) {

@@ -13,14 +13,20 @@ class SwitchViewController: UIViewController {
     @IBOutlet weak var resLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let barAppearance = UINavigationBarAppearance()
+        barAppearance.backgroundColor = .systemOrange
+        barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationItem.title = "Switch UI"
+        navigationItem.standardAppearance = barAppearance
+        navigationItem.scrollEdgeAppearance = barAppearance
 
         
     }
     
     @IBAction func mySwitchAction(_ sender: UISwitch) {
         if mySwitch.isOn{
-            view.backgroundColor = .systemOrange
-            resLabel.text = "The color is Orange"
+            view.backgroundColor = .systemRed
+            resLabel.text = "The color is Red"
         }else{
             view.backgroundColor = .systemYellow
             resLabel.text = "The color is Yellow"

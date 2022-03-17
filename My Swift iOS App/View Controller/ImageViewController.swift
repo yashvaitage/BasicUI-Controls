@@ -19,6 +19,14 @@ class ImageViewController: UIViewController {
 
         imgView.image = mainimg
         lblView.text = mainlbl
+        
+        let barAppearance = UINavigationBarAppearance()
+        barAppearance.backgroundColor = .systemOrange
+        barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationItem.title = "Image View"
+        navigationItem.standardAppearance = barAppearance
+        navigationItem.scrollEdgeAppearance = barAppearance
+
     }
     
 
