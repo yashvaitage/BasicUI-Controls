@@ -21,7 +21,6 @@ class SegmentViewController: UIViewController {
 
     }
     
-
     /*
     // MARK: - Navigation
 

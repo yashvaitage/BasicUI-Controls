@@ -39,30 +39,30 @@
                                 <rect key="frame" x="5" y="93" width="404" height="720"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rTl-UR-HVC">
-                                    <size key="itemSize" width="197" height="303"/>
+                                    <size key="itemSize" width="180" height="284"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="hKR-Nh-HRQ" customClass="CollectionViewCell" customModule="My_Swift_iOS_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="197" height="303"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="284"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uaA-Pj-yoe">
-                                            <rect key="frame" x="0.0" y="0.0" width="197" height="303"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="284"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZLn-P3-iPW" userLabel="Image">
-                                                    <rect key="frame" x="0.0" y="0.0" width="197" height="276"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="252"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="280" id="2vX-fF-Ymr"/>
                                                         <constraint firstAttribute="width" secondItem="ZLn-P3-iPW" secondAttribute="height" multiplier="197:276" id="Ri7-zj-Fj9"/>
-                                                        <constraint firstAttribute="width" constant="197" id="lBf-JN-S9F"/>
+                                                        <constraint firstAttribute="width" constant="180" id="fxx-ty-LFo"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="276" id="psi-f5-ITR"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHn-I0-CT7">
-                                                    <rect key="frame" x="0.0" y="276" width="197" height="27"/>
+                                                    <rect key="frame" x="0.0" y="252" width="180" height="32"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                                     <color key="textColor" systemColor="tintColor"/>
                                                     <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="qHn-I0-CT7" secondAttribute="bottom" id="wpU-bY-1IW"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="197" height="303"/>
+                                        <size key="customSize" width="180" height="284"/>
                                         <connections>
                                             <outlet property="wallimg" destination="ZLn-P3-iPW" id="KeJ-sN-0GO"/>
                                             <outlet property="walllbl" destination="qHn-I0-CT7" id="TwS-cc-5pa"/>
