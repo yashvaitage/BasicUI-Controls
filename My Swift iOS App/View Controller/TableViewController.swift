@@ -3,7 +3,6 @@
 //  My Swift iOS App
 //
 //  Created by Admin on 17/03/22.
-//
 
 import UIKit
 
@@ -46,7 +45,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let task = session.dataTask(with: apiURL) { data, response, error in print(response as Any)
             if error != nil {
-                print("Error: ", error as Any)
+                print("Error: ", error?.localizedDescription as Any)
                 return
             }
             do {
@@ -78,6 +77,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ApiTableViewCell // Create Instance For Cell
         cell?.ApiLbl.text = self.books[indexPath.row].title
+        cell?.authorLbl.text = self.books[indexPath.row].author
         return cell!
     }
     

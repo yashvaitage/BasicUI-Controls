@@ -10,6 +10,7 @@ import UIKit
 class ApiTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ApiLbl: UILabel!
+    @IBOutlet weak var authorLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
