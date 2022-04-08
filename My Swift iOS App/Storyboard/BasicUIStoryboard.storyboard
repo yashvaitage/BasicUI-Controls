@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BasicUI View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="BasicUIViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="BasicUIViewController" customModule="My_Swift_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xw2-9T-RGe">
+                                <rect key="frame" x="20" y="74" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ACK-tc-SAO"/>
+                                    <constraint firstAttribute="width" constant="60" id="uNN-gb-JxG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="RadioBtn1"/>
+                                <connections>
+                                    <action selector="radioBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dGI-P6-GMY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oP5-9B-qN0">
+                                <rect key="frame" x="160.5" y="88.5" width="93" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Check Box"/>
+                                <connections>
+                                    <action selector="checkBoxBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mnL-7g-cBD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oP5-9B-qN0" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="CQX-MS-TOe"/>
+                            <constraint firstItem="Xw2-9T-RGe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="dVH-1w-9vu"/>
+                            <constraint firstItem="oP5-9B-qN0" firstAttribute="centerY" secondItem="Xw2-9T-RGe" secondAttribute="centerY" id="lNT-E4-GL2"/>
+                            <constraint firstItem="Xw2-9T-RGe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="xAU-25-czn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DRI-P0-3nA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-817.39130434782612" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RadioBtn1" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

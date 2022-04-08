@@ -42,7 +42,7 @@
                                     <action selector="myBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2yg-Ia-dos"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mKs-aV-D2p">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  IQKeyboard Manager " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mKs-aV-D2p">
                                 <rect key="frame" x="10" y="673" width="394" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="a5K-Rj-Arv"/>
@@ -50,6 +50,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ump-hi-h4H">
+                                <rect key="frame" x="26" y="274" width="76.5" height="31"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Basic UI"/>
+                                <connections>
+                                    <action selector="basicUIBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GXv-m3-96R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGd-66-aHe">
+                                <rect key="frame" x="176" y="274" width="62.5" height="31"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Views"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk0-Go-59e">
+                                <rect key="frame" x="321" y="274" width="67" height="31"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -57,17 +78,23 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="krn-yj-qC1" secondAttribute="trailing" constant="26" id="39O-3Z-LnU"/>
                             <constraint firstItem="hw8-JZ-i3N" firstAttribute="top" secondItem="CU3-lv-dyP" secondAttribute="bottom" constant="274" id="ANf-iC-bJk"/>
                             <constraint firstItem="RM9-UX-DQB" firstAttribute="top" secondItem="hw8-JZ-i3N" secondAttribute="bottom" constant="36.5" id="ERN-Yn-6PW"/>
+                            <constraint firstItem="ump-hi-h4H" firstAttribute="centerY" secondItem="ZGd-66-aHe" secondAttribute="centerY" id="F4g-gb-BnW"/>
                             <constraint firstItem="krn-yj-qC1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="GbL-IS-4xg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mKs-aV-D2p" secondAttribute="bottom" constant="100" id="J2h-Kl-WcZ"/>
                             <constraint firstItem="hw8-JZ-i3N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LRe-qG-Ana"/>
+                            <constraint firstItem="ump-hi-h4H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="Ms1-Tl-4ur"/>
                             <constraint firstItem="CU3-lv-dyP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O68-iv-8rk"/>
                             <constraint firstItem="krn-yj-qC1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XdT-pG-Awx"/>
                             <constraint firstItem="krn-yj-qC1" firstAttribute="leading" secondItem="CU3-lv-dyP" secondAttribute="trailing" constant="-202" id="Xjc-nL-Dxm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hk0-Go-59e" secondAttribute="trailing" constant="26" id="ant-vz-rPX"/>
+                            <constraint firstItem="ZGd-66-aHe" firstAttribute="top" secondItem="CU3-lv-dyP" secondAttribute="bottom" constant="110" id="cMz-ea-ZyO"/>
                             <constraint firstItem="hw8-JZ-i3N" firstAttribute="centerX" secondItem="RM9-UX-DQB" secondAttribute="centerX" id="dHa-ya-NUD"/>
+                            <constraint firstItem="ZGd-66-aHe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dyd-Zd-DQ2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mKs-aV-D2p" secondAttribute="trailing" constant="10" id="e1l-ca-uhR"/>
                             <constraint firstItem="krn-yj-qC1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ivo-td-nZV"/>
                             <constraint firstItem="mKs-aV-D2p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="tY5-IU-Iiu"/>
                             <constraint firstItem="hw8-JZ-i3N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v1i-iM-qBO"/>
+                            <constraint firstItem="ZGd-66-aHe" firstAttribute="centerY" secondItem="hk0-Go-59e" secondAttribute="centerY" id="wfk-cc-2Kn"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Slider" image="slider.horizontal.below.square.filled.and.square" catalog="system" id="a69-VA-EbB"/>
@@ -178,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0io-9a-NZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813" y="552"/>
+            <point key="canvasLocation" x="811.59420289855075" y="551.11607142857144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9oo-Xh-qX1">
@@ -278,6 +305,9 @@
         <image name="slider.horizontal.below.square.filled.and.square" catalog="system" width="128" height="91"/>
         <image name="square.stack.3d.down.forward" catalog="system" width="124" height="128"/>
         <image name="switch.2" catalog="system" width="128" height="109"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,14 +1,12 @@
-//
 //  ImageViewController.swift
 //  My Swift iOS App
-//
 //  Created by Admin on 16/03/22.
-//
+
 
 import UIKit
 
 class ImageViewController: UIViewController {
-
+    
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var lblView: UILabel!
     
@@ -16,7 +14,7 @@ class ImageViewController: UIViewController {
     var mainlbl: String!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         imgView.image = mainimg
         lblView.text = mainlbl
         
@@ -26,7 +24,7 @@ class ImageViewController: UIViewController {
         navigationItem.title = "Image View"
         navigationItem.standardAppearance = barAppearance
         navigationItem.scrollEdgeAppearance = barAppearance
-
+        
     }
-
+    
 }

@@ -11,21 +11,21 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     
     var arrlbl = ["KTM", "Pulser NS 200", "Pulser NS Combo", "Pulser NS Black", "Shine", "Rolyal Enfield", "Boat", "Mountain", "Bus"]
     var arrimg = ["KTM", "Pulser", "Pulser3", "Pulser Black", "Shine", "RolyalEnfield", "img1", "img2", "img3"]
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         let barAppearance = UINavigationBarAppearance()
         barAppearance.backgroundColor = .systemOrange
         barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-//        barAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.red]
+        //        barAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.red]
         navigationItem.title = "Wallpaper Gallary"
         navigationItem.standardAppearance = barAppearance
         navigationItem.scrollEdgeAppearance = barAppearance
-
+        
         
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrlbl.count
     }
@@ -33,7 +33,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
         
-        cell.wallimg.image = UIImage(named: arrimg[indexPath.row]) 
+        cell.wallimg.image = UIImage(named: arrimg[indexPath.row])
         cell.walllbl.text = arrlbl[indexPath.row]
         return cell
     }
@@ -43,8 +43,8 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         imageDetail.mainlbl = arrlbl[indexPath.row]
         imageDetail.mainimg = UIImage(named: arrimg[indexPath.row])
         self.navigationController?.pushViewController(imageDetail, animated: true)
-//        ImageViewController.hidesBottomBarWhenPushed = true
-//        ImageViewController.tabBarController?.hidesBottomBarWhenPushed = true
+        //        ImageViewController.hidesBottomBarWhenPushed = true
+        //        ImageViewController.tabBarController?.hidesBottomBarWhenPushed = true
     }
-
+    
 }

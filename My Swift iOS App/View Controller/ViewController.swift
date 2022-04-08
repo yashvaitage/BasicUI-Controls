@@ -7,19 +7,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //==================Outlets=================
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myBtn: UIButton!
     @IBOutlet weak var sliderLbl: UILabel!
     
-    @IBAction func myBtnPressed(_ sender: Any) {
-        myLabel.textColor = UIColor.black
-        myLabel.backgroundColor = UIColor.systemOrange
-        myLabel.textAlignment = NSTextAlignment.center
-        myLabel.font = UIFont.systemFont(ofSize: 26)
-        myLabel.text = "Good Morning iOS Team"
-    }
+    //==================Properties======================
     
-    
+    //=================Lifecycle Methods=================
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,15 +29,36 @@ class ViewController: UIViewController {
         navigationItem.title = "Slider"
         navigationItem.standardAppearance = barAppearance
         navigationItem.scrollEdgeAppearance = barAppearance
-
+        
+        self.tabBarController?.tabBar.isHidden = false
+        
     }
-
+    
+    //===================Action Methods====================
+    
+    @IBAction func myBtnPressed(_ sender: Any) {
+        myLabel.textColor = UIColor.black
+        myLabel.backgroundColor = UIColor.systemOrange
+        myLabel.textAlignment = NSTextAlignment.center
+        myLabel.font = UIFont.systemFont(ofSize: 26)
+        myLabel.text = "Good Morning iOS Team"
+    }
+    
     @IBAction func sliderUpdate(_ sender: UISlider) {
         let currentValue = Int(sender.value)
         sliderLbl.text = "\(currentValue)"
     }
     
+    @IBAction func basicUIBtnTapped(_ sender: UIButton) {
+        
+        if let basicUIVC = UIStoryboard.init(name: "BasicUIStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "BasicUIViewController") as? BasicUIViewController
+        {
+            self.navigationController?.pushViewController(basicUIVC, animated: true)
+        }
+    }
+    
 }
+
 
 
 

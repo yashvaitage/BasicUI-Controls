@@ -41,8 +41,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func getBookListAPI(){
         let session = URLSession.shared
         let apiURL = URL(string: "https://cocoacasts.s3.us-west-1.amazonaws.com/15eb4a8ed546df91dd5c1c50cd6250da01503242/books.json")!
-//        var request = URLRequest(url: apiURL)
-//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        //        var request = URLRequest(url: apiURL)
+        //        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let task = session.dataTask(with: apiURL) { data, response, error in print(response as Any)
             if error != nil {
                 print("Error: ", error?.localizedDescription as Any)
@@ -86,18 +86,18 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     /* Swipe To Delete */
-     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-         return .delete
-     }
-     
-     func tableView(_ tableView: UITableView,commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
-         if editingStyle == .delete
-         {
-             tableView.beginUpdates()
-             self.books.remove(at: indexPath.row).title
-             tableView.deleteRows(at: [indexPath], with: .fade)
-             tableView.endUpdates()
-         }
-     }
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView,commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        if editingStyle == .delete
+        {
+            tableView.beginUpdates()
+            self.books.remove(at: indexPath.row).title
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+    }
     
 }
