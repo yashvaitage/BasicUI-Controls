@@ -1,4 +1,3 @@
-//
 //  ViewController.swift
 //  My Swift iOS App
 //
@@ -32,6 +31,9 @@ class ViewController: UIViewController {
         
         self.tabBarController?.tabBar.isHidden = false
         
+        let alert = UIAlertController(title: "Welcome", message: "Hello Nishant!, Welcome to your app", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Thank You!", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     //===================Action Methods====================

@@ -1,9 +1,6 @@
-//
-//  AppDelegate.swift
+// AppDelegate.swift
 //  My Swift iOS App
-//
 //  Created by Admin on 14/02/22.
-//
 
 import UIKit
 import IQKeyboardManager
@@ -32,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
 
 }
 

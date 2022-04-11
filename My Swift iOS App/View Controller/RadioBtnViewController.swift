@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RadioBtnViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class RadioBtnViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate{
     
     
     //=======================Outlets===================
@@ -46,9 +46,15 @@ class RadioBtnViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? RadioBtnTableViewCell // Create Instance For Cell
         cell?.radioBtnLbl.text = self.arr[indexPath.row]
-        if(self.selectedRow == indexPath.row){
+
+         if (self.selectedRow == nil){
+            let alert = UIAlertController(title: "Alert", message: "Please Check Any One Language", preferredStyle: UIAlertController.Style.alert)//Create the alert
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)) //add the action
+            self.present(alert, animated: true, completion: nil) //show the alert
+        }   else if(self.selectedRow == indexPath.row){
             cell?.radioBtnImg.image = UIImage(named: "check")
-        }else{
+        }
+        else{
             cell?.radioBtnImg.image = UIImage(named: "uncheck")
         }
         cell?.selectionStyle = .none
@@ -63,6 +69,7 @@ class RadioBtnViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
 
+    
 
     
 }
