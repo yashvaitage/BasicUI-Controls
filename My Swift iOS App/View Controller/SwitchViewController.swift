@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class SwitchViewController: UIViewController {
     
 //=====================Outlets=======================
@@ -20,12 +21,17 @@ class SwitchViewController: UIViewController {
 //==================View LifeCycle Methods==============
     override func viewDidLoad() {
         super.viewDidLoad()
-        let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = .systemOrange
-        barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationItem.title = "Switch UI"
-        navigationItem.standardAppearance = barAppearance
-        navigationItem.scrollEdgeAppearance = barAppearance
+        if #available(iOS 13.0, *) {
+            let barAppearance = UINavigationBarAppearance()
+            
+            barAppearance.backgroundColor = .systemOrange
+            barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationItem.title = "Slider"
+            navigationItem.standardAppearance = barAppearance
+            navigationItem.scrollEdgeAppearance = barAppearance
+        } else {
+            // Fallback on earlier versions
+        }
         
         
     }

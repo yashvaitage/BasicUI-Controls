@@ -5,6 +5,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class ImageViewController: UIViewController {
     
     @IBOutlet weak var imgView: UIImageView!
@@ -18,12 +19,17 @@ class ImageViewController: UIViewController {
         imgView.image = mainimg
         lblView.text = mainlbl
         
-        let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = .systemOrange
-        barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationItem.title = "Image View"
-        navigationItem.standardAppearance = barAppearance
-        navigationItem.scrollEdgeAppearance = barAppearance
+        if #available(iOS 13.0, *) {
+            let barAppearance = UINavigationBarAppearance()
+            
+            barAppearance.backgroundColor = .systemOrange
+            barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationItem.title = "Slider"
+            navigationItem.standardAppearance = barAppearance
+            navigationItem.scrollEdgeAppearance = barAppearance
+        } else {
+            // Fallback on earlier versions
+        }
         
     }
     

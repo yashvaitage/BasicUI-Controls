@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class CollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var arrlbl = ["KTM", "Pulser NS 200", "Pulser NS Combo", "Pulser NS Black", "Shine", "Rolyal Enfield", "Boat", "Mountain", "Bus"]
@@ -15,14 +16,17 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = .systemOrange
-        barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        //        barAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.red]
-        navigationItem.title = "Wallpaper Gallary"
-        navigationItem.standardAppearance = barAppearance
-        navigationItem.scrollEdgeAppearance = barAppearance
-        
+        if #available(iOS 13.0, *) {
+            let barAppearance = UINavigationBarAppearance()
+            
+            barAppearance.backgroundColor = .systemOrange
+            barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationItem.title = "Slider"
+            navigationItem.standardAppearance = barAppearance
+            navigationItem.scrollEdgeAppearance = barAppearance
+        } else {
+            // Fallback on earlier versions
+        }
         
     }
     

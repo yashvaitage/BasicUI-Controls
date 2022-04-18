@@ -12,13 +12,17 @@ class SegmentViewController: UIViewController {
     @IBOutlet weak var myImgView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = .systemOrange
-        barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationItem.title = "Segmented Control"
-        navigationItem.standardAppearance = barAppearance
-        navigationItem.scrollEdgeAppearance = barAppearance
-
+        if #available(iOS 13.0, *) {
+            let barAppearance = UINavigationBarAppearance()
+            
+            barAppearance.backgroundColor = .systemOrange
+            barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationItem.title = "Slider"
+            navigationItem.standardAppearance = barAppearance
+            navigationItem.scrollEdgeAppearance = barAppearance
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     /*

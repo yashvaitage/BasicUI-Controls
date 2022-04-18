@@ -1,9 +1,6 @@
-//
 //  BasicUIViewController.swift
 //  My Swift iOS App
-//
 //  Created by Admin on 08/04/22.
-//
 
 import UIKit
 
@@ -17,12 +14,17 @@ class BasicUIViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = .systemOrange
-        barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationItem.title = "Controls"
-        navigationItem.standardAppearance = barAppearance
-        navigationItem.scrollEdgeAppearance = barAppearance
+        if #available(iOS 13.0, *) {
+            let barAppearance = UINavigationBarAppearance()
+            
+            barAppearance.backgroundColor = .systemOrange
+            barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationItem.title = "Slider"
+            navigationItem.standardAppearance = barAppearance
+            navigationItem.scrollEdgeAppearance = barAppearance
+        } else {
+            // Fallback on earlier versions
+        }
         
         self.tabBarController?.tabBar.isHidden = false
         
@@ -45,12 +47,13 @@ class BasicUIViewController: UIViewController {
     @IBAction func radioBtnTapped(_ sender: Any) {
         if let radioBtnVC = UIStoryboard.init(name: "RadioBtnStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "RadioBtnStoryboard") as? RadioBtnViewController{
             self.navigationController?.pushViewController(radioBtnVC, animated: true)
-            radioBtnVC.hidesBottomBarWhenPushed = true
             
         }
     }
     
     @IBAction func checkBoxBtnTapped(_ sender: Any) {
-        
+        if let checkBtnVC = UIStoryboard.init(name: "CheckBoxStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "CheckBoxViewController") as? CheckBoxViewController{
+            self.navigationController?.pushViewController(checkBtnVC, animated: true)
+        }
     }
 }

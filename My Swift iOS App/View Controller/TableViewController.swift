@@ -6,6 +6,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
@@ -23,14 +24,17 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.refreshControl = pullControl
         
         /* Navigation Bar Appearance */
-        let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = .systemOrange
-        barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        
-        navigationItem.standardAppearance = barAppearance
-        navigationItem.scrollEdgeAppearance = barAppearance
-        
-        navigationItem.title = "API Call"
+        if #available(iOS 13.0, *) {
+            let barAppearance = UINavigationBarAppearance()
+            
+            barAppearance.backgroundColor = .systemOrange
+            barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationItem.title = "Slider"
+            navigationItem.standardAppearance = barAppearance
+            navigationItem.scrollEdgeAppearance = barAppearance
+        } else {
+            // Fallback on earlier versions
+        }
         
         if #available(iOS 15.0, *){
             self.tableView.sectionHeaderTopPadding = 0

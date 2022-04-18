@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,34 +17,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xw2-9T-RGe">
-                                <rect key="frame" x="20" y="74" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ACK-tc-SAO"/>
-                                    <constraint firstAttribute="width" constant="60" id="uNN-gb-JxG"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="RadioBtn1"/>
-                                <connections>
-                                    <action selector="radioBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dGI-P6-GMY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oP5-9B-qN0">
-                                <rect key="frame" x="160.5" y="88.5" width="93" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Check Box"/>
+                                <rect key="frame" x="177" y="74" width="60" height="60"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="checkBoxBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mnL-7g-cBD"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-box" translatesAutoresizingMaskIntoConstraints="NO" id="SSN-Jj-dJg">
+                                <rect key="frame" x="177" y="74" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="5jS-dg-p9I"/>
+                                    <constraint firstAttribute="height" constant="60" id="e0P-CR-UYI"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RadioBtn1" translatesAutoresizingMaskIntoConstraints="NO" id="O7f-QX-gp1">
+                                <rect key="frame" x="20" y="74" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Db7-YN-JzV"/>
+                                    <constraint firstAttribute="height" constant="60" id="bys-ug-gY5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xw2-9T-RGe">
+                                <rect key="frame" x="20" y="74" width="60" height="60"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="radioBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dGI-P6-GMY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="oP5-9B-qN0" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="CQX-MS-TOe"/>
-                            <constraint firstItem="Xw2-9T-RGe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="dVH-1w-9vu"/>
-                            <constraint firstItem="oP5-9B-qN0" firstAttribute="centerY" secondItem="Xw2-9T-RGe" secondAttribute="centerY" id="lNT-E4-GL2"/>
-                            <constraint firstItem="Xw2-9T-RGe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="xAU-25-czn"/>
+                            <constraint firstItem="O7f-QX-gp1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="1en-np-ON2"/>
+                            <constraint firstItem="oP5-9B-qN0" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2Nw-W1-YcZ"/>
+                            <constraint firstItem="Xw2-9T-RGe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="EmH-lO-fDI"/>
+                            <constraint firstItem="SSN-Jj-dJg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Izv-nX-ucj"/>
+                            <constraint firstItem="oP5-9B-qN0" firstAttribute="top" secondItem="SSN-Jj-dJg" secondAttribute="top" id="JY8-3O-GdO"/>
+                            <constraint firstItem="oP5-9B-qN0" firstAttribute="width" secondItem="SSN-Jj-dJg" secondAttribute="width" id="KUA-d8-rd8"/>
+                            <constraint firstItem="oP5-9B-qN0" firstAttribute="height" secondItem="SSN-Jj-dJg" secondAttribute="height" id="Opf-Di-9CR"/>
+                            <constraint firstItem="Xw2-9T-RGe" firstAttribute="height" secondItem="O7f-QX-gp1" secondAttribute="height" id="Pwv-e7-JYO"/>
+                            <constraint firstItem="Xw2-9T-RGe" firstAttribute="leading" secondItem="O7f-QX-gp1" secondAttribute="leading" id="evO-CU-BWY"/>
+                            <constraint firstItem="O7f-QX-gp1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="fh1-E7-MqF"/>
+                            <constraint firstItem="Xw2-9T-RGe" firstAttribute="width" secondItem="O7f-QX-gp1" secondAttribute="width" id="iRn-Uk-kjY"/>
+                            <constraint firstItem="SSN-Jj-dJg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="ovo-gR-3NE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DRI-P0-3nA"/>
@@ -55,6 +72,7 @@
     </scenes>
     <resources>
         <image name="RadioBtn1" width="30" height="30"/>
+        <image name="check-box" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

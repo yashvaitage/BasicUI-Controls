@@ -22,12 +22,18 @@ class ViewController: UIViewController {
         myBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
         myBtn.setTitle("Hit Me!", for: UIControl.State.normal)
         
-        let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = .systemOrange
-        barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationItem.title = "Slider"
-        navigationItem.standardAppearance = barAppearance
-        navigationItem.scrollEdgeAppearance = barAppearance
+        if #available(iOS 13.0, *) {
+            let barAppearance = UINavigationBarAppearance()
+            
+            barAppearance.backgroundColor = .systemOrange
+            barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationItem.title = "Slider"
+            navigationItem.standardAppearance = barAppearance
+            navigationItem.scrollEdgeAppearance = barAppearance
+        } else {
+            // Fallback on earlier versions
+        }
+        
         
         self.tabBarController?.tabBar.isHidden = false
         
@@ -53,9 +59,13 @@ class ViewController: UIViewController {
     
     @IBAction func basicUIBtnTapped(_ sender: UIButton) {
         
-        if let basicUIVC = UIStoryboard.init(name: "BasicUIStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "BasicUIViewController") as? BasicUIViewController
-        {
-            self.navigationController?.pushViewController(basicUIVC, animated: true)
+        if #available(iOS 13.0, *) {
+            if let basicUIVC = UIStoryboard.init(name: "BasicUIStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "BasicUIViewController") as? BasicUIViewController
+            {
+                self.navigationController?.pushViewController(basicUIVC, animated: true)
+            }
+        } else {
+            // Fallback on earlier versions
         }
     }
     
